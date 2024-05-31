@@ -62,34 +62,21 @@ const App = () => {
             label: 'Bitirme Projesi',
             icon: 'pi pi-fw pi-home',
             items: [
-                { label: 'Home', icon: 'pi pi-fw pi-home', to: '/bitirme/home'},
+                { label: 'Home', icon: 'pi pi-fw pi-home', to: '/bitirme/home' },
                 { label: 'Abstract of the Project', icon: 'pi pi-fw pi-question-circle', to: '/bitirme/abstract' },
                 { label: 'Timeline', icon: 'pi pi-fw pi-calendar', to: '/bitirme/timeline' },
                 { label: 'Team', icon: 'pi pi-fw pi-user', to: '/bitirme/whoarewe' },
-                
+
             ]
         },
-
-
-
-        
-
-        
-        
     ];
 
     const routes = [
         { path: '/', parent: '', label: '' },
-
-
-
-
-
-
         // Bitirme Projesi
         { path: '/', parent: 'Bitirme', label: 'Home' }, // Layout için yazdık
         { path: '/', parent: 'Bitirme', label: 'TimeLine' },
-        { path: '/', parent: 'Bitirme', label: 'Who Are We' }, 
+        { path: '/', parent: 'Bitirme', label: 'Who Are We' },
     ];
 
     useEffect(() => {
@@ -369,11 +356,11 @@ const App = () => {
                 </div>
 
                 <div className="layout-main">
-                    <AppBreadcrumb routes={routes} />
+                    {/* <AppBreadcrumb routes={routes} /> */}
 
                     <div className="layout-content">
                         <Routes>
-                            <Route path="/" element={<BitirmeHome colorMode={colorMode} isNewThemeLoaded={newThemeLoaded} onNewThemeChange={(e) => setNewThemeLoaded(e)} location={location} />} />
+                            <Route path="" element={<BitirmeHome colorMode={colorMode} isNewThemeLoaded={newThemeLoaded} onNewThemeChange={(e) => setNewThemeLoaded(e)} location={location} />} />
                             <Route path="/bitirme/home" element={<BitirmeHome />} />
                             <Route path="/bitirme/timeline" element={<BitirmeTimeLine />} />
                             <Route path="/bitirme/WhoAreWe" element={<BitirmeWhoAreWe />} />
