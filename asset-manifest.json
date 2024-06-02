@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BitirmeProjesi/static/css/main.11b6a89b.css",
-    "main.js": "/BitirmeProjesi/static/js/main.88c36277.js",
+    "main.js": "/BitirmeProjesi/static/js/main.5f900314.js",
     "static/js/496.c7da15c2.chunk.js": "/BitirmeProjesi/static/js/496.c7da15c2.chunk.js",
     "static/media/primeicons.svg": "/BitirmeProjesi/static/media/primeicons.e1441b135b3ca9ad643c.svg",
     "static/media/primeicons.eot": "/BitirmeProjesi/static/media/primeicons.d44157bdfa026dc877af.eot",
@@ -12,11 +12,11 @@
     "static/media/color.png": "/BitirmeProjesi/static/media/color.6441e63a57ccc5105bad.png",
     "index.html": "/BitirmeProjesi/index.html",
     "main.11b6a89b.css.map": "/BitirmeProjesi/static/css/main.11b6a89b.css.map",
-    "main.88c36277.js.map": "/BitirmeProjesi/static/js/main.88c36277.js.map",
+    "main.5f900314.js.map": "/BitirmeProjesi/static/js/main.5f900314.js.map",
     "496.c7da15c2.chunk.js.map": "/BitirmeProjesi/static/js/496.c7da15c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.11b6a89b.css",
-    "static/js/main.88c36277.js"
+    "static/js/main.5f900314.js"
   ]
 }
