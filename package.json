@@ -1,7 +1,7 @@
 {
     "name": "ultima-react",
     "version": "9.0.0",
-    "homepage": ".",
+    "homepage": "https://esadboran.github.io/BitirmeProjesi/",
     "private": true,
     "dependencies": {
         "@fullcalendar/core": "^6.1.4",
@@ -24,7 +24,7 @@
     },
     "scripts": {
         "start": "react-scripts start",
-        "build": "GENERATE_SOURCEMAP=false react-scripts build",
+        "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
@@ -48,5 +48,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "gh-pages": "^6.1.1"
     }
 }
