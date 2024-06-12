@@ -8,10 +8,17 @@ const AppFooter = (props) => {
 
     return (
         <div className="layout-footer flex align-items-center p-4 shadow-2">
-            <img id="footer-logo" src={`assets/layout/images/footer-${props.colorMode === 'light' ? 'ultima' : 'ultima-dark'}.svg`} alt="ultima-footer-logo" />
-            <Button type="button" icon="pi pi-github fs-large" className={classNames('p-button-rounded p-button-text p-button-plain', { 'ml-auto mr-2': !isRTL, 'ml-2 mr-auto': isRTL })}></Button>
-            <Button type="button" icon="pi pi-facebook fs-large" className={classNames('p-button-rounded p-button-text p-button-plain', { 'mr-2': !isRTL, 'ml-2': isRTL })}></Button>
-            <Button type="button" icon="pi pi-twitter fs-large" className={classNames('p-button-rounded p-button-text p-button-plain', { 'mr-2': !isRTL, 'ml-2': isRTL })}></Button>
+            <img id="footer-logo" src={`assets/demo/images/hacettepe_logo.png`} alt="Hacettepe Üniversitesi" className="mr-2" style={{ width: '2rem' }} />
+            <h6>Hacettepe University | Faculty of Engineering | Department of Computer Engineering </h6>
+            <Button className={classNames('p-button-rounded p-button-text p-button-plain', { 'ml-auto mr-2': !isRTL, 'ml-2 mr-auto': isRTL })}></Button>
+            <Button className={classNames('p-button-rounded p-button-text p-button-plain', { 'ml-auto mr-2': !isRTL, 'ml-2 mr-auto': isRTL })}></Button>
+            <Button className={classNames('p-button-rounded p-button-text p-button-plain', { 'ml-auto mr-2': !isRTL, 'ml-2 mr-auto': isRTL })}></Button>
+            <Button className={classNames('p-button-rounded p-button-text p-button-plain', { 'ml-auto mr-2': !isRTL, 'ml-2 mr-auto': isRTL })}></Button>
+            <Button className={classNames('p-button-rounded p-button-text p-button-plain', { 'ml-auto mr-2': !isRTL, 'ml-2 mr-auto': isRTL })}></Button>
+            <Button className={classNames('p-button-rounded p-button-text p-button-plain', { 'ml-auto mr-2': !isRTL, 'ml-2 mr-auto': isRTL })}></Button>
+            <a href="https://github.com/BBM479-480-DesignProject/Active-Object-Tracking-on-a-Drone" target="_blank" rel="noopener noreferrer">
+                <i className="pi pi-github mr-4 p-text-secondary p-overlay-badge" style={{ fontSize: '2rem' }}></i>
+            </a>
         </div>
     );
 };

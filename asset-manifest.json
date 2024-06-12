@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/BitirmeProjesi/static/css/main.11b6a89b.css",
+    "main.js": "/BitirmeProjesi/static/js/main.aa1d86c6.js",
+    "static/js/496.c7da15c2.chunk.js": "/BitirmeProjesi/static/js/496.c7da15c2.chunk.js",
+    "static/media/primeicons.svg": "/BitirmeProjesi/static/media/primeicons.e1441b135b3ca9ad643c.svg",
+    "static/media/primeicons.eot": "/BitirmeProjesi/static/media/primeicons.d44157bdfa026dc877af.eot",
+    "static/media/primeicons.woff": "/BitirmeProjesi/static/media/primeicons.10d3152104f2208ac82a.woff",
+    "static/media/primeicons.ttf": "/BitirmeProjesi/static/media/primeicons.ea5358601d0a3fd6670b.ttf",
+    "static/media/flags_responsive.png": "/BitirmeProjesi/static/media/flags_responsive.266bf78d57b6c463405e.png",
+    "static/media/primeicons.woff2": "/BitirmeProjesi/static/media/primeicons.78172950b335ccdb94e2.woff2",
+    "static/media/color.png": "/BitirmeProjesi/static/media/color.6441e63a57ccc5105bad.png",
+    "index.html": "/BitirmeProjesi/index.html",
+    "main.11b6a89b.css.map": "/BitirmeProjesi/static/css/main.11b6a89b.css.map",
+    "main.aa1d86c6.js.map": "/BitirmeProjesi/static/js/main.aa1d86c6.js.map",
+    "496.c7da15c2.chunk.js.map": "/BitirmeProjesi/static/js/496.c7da15c2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11b6a89b.css",
+    "static/js/main.aa1d86c6.js"
+  ]
+}

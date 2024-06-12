@@ -1,19 +1,41 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { Button } from 'primereact/button';
 import { Divider } from 'primereact/divider';
 import { Card } from 'primereact/card';
+import { Dialog } from 'primereact/dialog';
+
+
 const BitirmeHome = () => {
+    const [displayBasic, setDisplayBasic] = useState(false);
+
+
+    const pdfUrl = 'https://github.com/BBM479-480-DesignProject/Active-Object-Tracking-on-a-Drone/blob/main/Poster.pdf'; 
+
+    const handleDownload = () => {
+        window.open(pdfUrl, '_blank');
+    };
+    
+
+    const basicDialogFooter = (
+        <Button
+            type="button"
+            label="Yes"
+            onClick={() => {
+                setDisplayBasic(false);
+                window.open('https://github.com/BBM479-480-DesignProject/Active-Object-Tracking-on-a-Drone', '_blank'); // Replace with your desired URL
+            }}
+            icon="pi pi-check"
+            className="p-button-secondary"
+        />
+    );
+    
 
     return (
         <div>
             <div>
+               
                 <div className="col-12">
                     <h1 className="text-center">BBM 480 : Design Project</h1>
-                    {/* <div className="field">
-                    <span className="p-float-label">
-                    <img src={`assets\\layout\\images\\landing\\landing-header.png`} alt="galleria" className="my-4 md:my-0 w-full max-w-screen-xl shadow-2 mr-5" />
-                    </span>
-                </div> */}
                 </div>
                 <div className="col-12">
                     <div className="card">
@@ -40,61 +62,77 @@ const BitirmeHome = () => {
                             </div>
                             <div className="col-1">
                                 <Divider layout="vertical">
-                                    <i className="pi pi-arrow-right"></i>
                                 </Divider>
                             </div>
                             <div className="col-5 align-items-center justify-content-center">
                                 <p>
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
-                                </p>
+                                The rapid growth of drone technology has created new opportunities for research and practical applications, particularly in the realm of autonomous systems. One of the critical capabilities that enhance the functionality of drones in these applications is their ability to autonomously detect and track objects. Object detection involves identifying and locating objects within a frame, while object tracking involves following the identified object across successive frames. Integrating these capabilities into drones enhances their autonomous navigation, allowing them to interact more intelligently with their environment. This project focused on developing an active object tracking and detection system for drones using the Airsim simulator.                                </p>
                                 <Divider layout="horizontal" align="center">
-                                    <span className="p-tag">Badge</span>
                                 </Divider>
                                 <p>
-                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
-                                    in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-                                    minus.
+                                Our first goal in this project is to create an environment asset on the Airsim Simulator. Initially, we placed multiple vehicles and assets in the environment. After setting up the environment , we implemented multiple vehicle detection and multi object tracking using artificial intelligence models. We implemented a physical tracking algorithm for the drone to follow one selected object acquired from multi object tracking. We also tried to implement a system to seamlessly switch between objects that are followed within the view of the camera. 
+
                                 </p>
                                 <Divider align="right">
-                                    <Button label="Button" icon="pi pi-search" className="p-button-outlined"></Button>
                                 </Divider>
                                 <p>
-                                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-                                    reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Donec vel volutpat ipsum. Integer nunc magna, posuere ut tincidunt eget, egestas vitae sapien. Morbi dapibus luctus odio.
+                                As a result of our tests, we decided on the optimal controller and tracking algorithms. We tested these choices on a route identified as the main problem.  Our track starts with a slight right curve and at the apex  of that curve we put a bridge to block the drone's vision. Then the road starts to slope down as a result of this the vehicles gain velocity. When the slope is finished there is a tight left turn. Our track consists of these kinds of elements such as downhill road, uphill road, trees with large leaves and traffic signs that block the drone’s vision, and constantly changing reflection that occurs on the vehicle's body and on the road due to curves and slopes. As vehicles we have 4 different vehicles. 3 of them have the same body with different colors, one of them has the shape of an  SUV. One of the vehicle’s
+                                 is coming from the opposite direction. The tracker and algorithms that we used were able to complete this route successfully. 
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="grid">
-                <div className="col-12">
-                    <div className="card">
-                        <Card title="Abstract of the Project">
-                            <p>
-                                As drone technology continues to gain traction across multiple industries, the necessity for robust object tracking and detection capabilities becomes increasingly apparent. Traditional methods often prove inadequate, particularly when faced with adverse weather conditions or complex environments filled with obstacles. These limitations constrain the potential applications of drones. Hence, this study, titled "Active Object Tracking on a Drone," explores innovative strategies to elevate drone-based object tracking to new heights.
-                            </p>
-                            <p>
-                                Drawing upon previous research, our project tackles real-world challenges such as trajectory tracking, multi-object detection, and maintaining tracking continuity despite obstacles like bridges, trees, or traffic signs. We harness the power of the Airsim simulator program, providing a virtual environment for meticulous testing and development.
-                            </p>
-                            <p>
-                                Our methodology involves generating bespoke datasets tailored to our specific objectives and strategically utilizing pre-trained models to streamline the training and evaluation processes of our tracking algorithms. By immersing ourselves in diverse simulated scenarios and environmental conditions, our goal is to bolster the performance of our algorithms across a spectrum of real-world settings.
-                            </p>
-                            <p>
-                                Our exploration within the Airsim simulator framework encompasses various environments and conditions. From scenarios with varying lighting conditions to simulations of obstructed vision caused by obstacles, we confront the complexities inherent in real-world drone operations, facilitating the efficient development and rigorous testing of sophisticated tracking algorithms.
-                            </p>
-                            <p>
-                                We aim to demonstrate the efficacy of simulation-based approaches in addressing tangible challenges in drone-based object tracking. By enhancing reliability and adaptability, we empower drones to autonomously navigate and track targets, a capability crucial for operations such as search and rescue missions. Additionally, our work opens avenues for innovative applications, from law enforcement surveillance in urban environments to crowd monitoring during events, ultimately augmenting public safety.
-                            </p>
-                            <p>
-                                In the future stages of the project, after completing development and testing within the Airsim simulator, the focus may shift to real-world implementation and testing. This phase will involve deploying the algorithms on actual drones and conducting tests in real-world conditions. By doing so, we aim to validate the effectiveness of our approaches in enhancing drone autonomy and object tracking capabilities. Through this iterative process of refinement and validation, we anticipate significant advancements in the reliability and adaptability of drone-based tracking systems.
-                            </p>
-                        </Card>
+            <div className="container mt-5">
+                <div className="card p-fluid">
+                    <h5>Source Code</h5>
+                    <Dialog header="Github" visible={displayBasic} style={{ width: '30vw' }} modal footer={basicDialogFooter} onHide={() => setDisplayBasic(false)}>
+                        <p>
+                            Would you like to see the source code of our project?
+                        </p>
+                    </Dialog>
+                    <div className="grid">
+                        <div className="col-12">
+                            <Button type="button" label="Github Source Code" icon="pi pi-external-link" onClick={() => setDisplayBasic(true)} />
+                        </div>
                     </div>
                 </div>
-            </div>
+            <div className="card p-fluid">
+                <Card title="Project Poster" style={{height: '50%', margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <img
+                        src={'assets/demo/images/poster.jpeg'}
+                        style={{ width: '50%', height: '%50', display: 'block', margin: '1em auto' }}
+                        alt="Project Poster"
+                    />
+                    <Button
+                        variant="primary"
+                        style={{ width: '50%', height: '%50', display: 'block', margin: '1em auto' }}
+                        onClick={handleDownload}
+                        download
+                    >
+                        Download Pdf
+                    </Button>
+                </Card>
+            </div> 
+            <div className="card p-fluid">
+                <div className="col-12">
+                    <Card title="Demo of the Project">
+                        <div className="video-container" style={{ position: 'relative', paddingBottom: '40%', height: 0, overflow: 'hidden', maxWidth: '70%', margin: '0 auto', background: '#000' }}>
+                            <iframe 
+                            src="https://www.youtube.com/embed/4eJiJchDId0" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen 
+                            title="Project Abstract Video"
+                            style={{ position: 'absolute', top: 0, left: 0, display: 'block', width: '100%', height: '100%' }}
+                            ></iframe>
+                        </div>
+                    </Card>
+                </div>
+            </div>   
         </div>
+    </div>
     );
 };
 
